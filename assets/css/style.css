@@ -1,4 +1,40 @@
-html {
-	font-size: 10px;
-	color: blue;
+*{
+	font-family: verdana; 
 }
+
+body {
+background: gray; }
+
+header{
+	line-height: 50px;
+	color: white;
+	padding: 30px;
+	font-size: 35px;	}
+
+h1 {display: inline-block; }
+
+header span {
+	padding: 10px;
+	font-size: 15px;
+	color: white; }
+
+section#intro div,
+section#data-project div,
+section#broader-implications div {
+	min-height: 250px; 
+	margin-bottom: 15px; 
+	background: white; 
+	color: black; 
+	font-size: 20px;
+	padding: 20px;	}
+
+section#intro,
+section#data-project,
+section#broader-implications {
+	display: grid; 
+	grid-gap: 15px; 
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+	
+@media screen and (min-width: 1080px) {
+	section#intro { grid-template-columns: 40% 1fr; }
+	section#data-project {grid-template-columns: 1fr 40%; }
